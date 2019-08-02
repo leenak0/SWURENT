@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "time_array">
+        <item>1시간</item>
+        <item>2시간</item>
+        <item>3시간</item>
+    </string-array>
+
+    <string-array name = "object_array">
+        <item>팀 프로젝트</item>
+        <item>스터디</item>
+        <item>대회 진행</item>
+    </string-array>
+</resources>
+

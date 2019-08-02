@@ -9,13 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".compare"></activity>
+        <activity android:name=".compare_classroom" />
+        <activity android:name=".compare_floor" />
+        <activity android:name=".compare_building" />
+        <activity android:name=".info" />
+        <activity android:name=".info_classroom" />
+        <activity android:name=".info_floor" />
+        <activity android:name=".info_building" />
+        <activity android:name=".reservation_list" />
+        <activity android:name=".reservation" />
+        <activity android:name=".reservation_classroom" />
+        <activity android:name=".reservation_floor" />
+        <activity android:name=".reservation_building" />
+        <activity android:name=".reservation_history" />
+        <activity
+            android:name=".Setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/settingTheme" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

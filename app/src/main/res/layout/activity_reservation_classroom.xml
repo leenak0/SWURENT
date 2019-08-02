@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".reservation_classroom">
+
+        <Button
+            android:id="@+id/btn_choice_date"
+            android:text="예약 날짜 선택하기"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/wine"
+            android:textSize="18sp"
+            android:background="@drawable/mainmenu"
+            android:onClick="OnClickHandler"/>
+
+        <TextView
+            android:id="@+id/textview_date"
+            android:text="예약날짜 :        년   월   일"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"/>
+
+    <ListView
+        android:id="@+id/Listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"/>
+
+        <Button
+            android:id="@+id/btn_move_back_classroom"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="뒤로"
+            android:textColor="@color/wine"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/mainmenu"/>
+
+</FrameLayout>

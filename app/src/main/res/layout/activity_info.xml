@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".info">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="80dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="501호 강의실 정보"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:textColor="#000000"
+            android:textSize="30sp"/>
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/classroom"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:background="@color/white">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간대별"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="일간추이"/>
+            <Spinner
+                android:id="@+id/graph"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"/>
+        </RadioGroup>
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/graph"/>
+
+        <TableLayout
+            android:id="@+id/info_table"
+            android:adjustViewBounds="true"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/row_border">
+
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="시간"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="실내"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="실외"
+                android:textColor="#000000" />
+        </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/row_border">
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="18"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textColor="#000000" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/row_border">
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="17"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="21"
+                    android:textColor="#000000" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/row_border">
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="18"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textColor="#000000" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/row_border">
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="19"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="23"
+                    android:textColor="#000000" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/info_prev"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="이전"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/mainmenu"/>
+
+    <!--<Button
+        android:id="@+id/info_reserv"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="예약"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/mainmenu"/>-->
+
+    <Button
+        android:id="@+id/info_com"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="비교"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/mainmenu"/>
+
+</FrameLayout>

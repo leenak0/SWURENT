@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    tools:context=".reservation_floor">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="층을 선택해주세요"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/reserv_2f"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="2층"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mainmenu"/>
+
+    <Button
+        android:id="@+id/reserv_3f"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="3층"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginTop="160dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mainmenu"/>
+
+    <Button
+        android:id="@+id/reserv_4f"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="4층"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginTop="220dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mainmenu"/>
+
+    <Button
+        android:id="@+id/reserv_5f"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="5층"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginTop="280dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mainmenu"/>
+
+    <Button
+        android:id="@+id/reserv_6f"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="6층"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginTop="340dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/mainmenu"/>
+
+    <Button
+        android:id="@+id/reserv_f_prev"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="뒤로"
+        android:textColor="@color/wine"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/mainmenu"/>
+
+</FrameLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/wine"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/close_setting"
+            android:text="X"
+            android:textSize="15sp"
+            android:textColor="@color/wine"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:onClick="close"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/change_theme"
+            android:text="테마변경"
+            android:textSize="15sp"
+            android:textColor="@color/wine"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/review"
+            android:text="앱 사용 만족도 제출"
+            android:textSize="15sp"
+            android:textColor="@color/wine"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/logout"
+            android:text="로그아웃"
+            android:textSize="15sp"
+            android:textColor="@color/wine"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:onClick="logout"/>
+    </LinearLayout>
+
+</LinearLayout>
