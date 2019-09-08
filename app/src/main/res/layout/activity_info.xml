@@ -62,13 +62,12 @@
                 android:layout_marginLeft="30dp"/>
         </RadioGroup>
 
-        <ImageView
-            android:adjustViewBounds="true"
+        <WebView
+            android:id="@+id/webView_info"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/graph"/>
+            android:layout_marginTop="15dp" />
 
         <TableLayout
             android:id="@+id/info_table"
