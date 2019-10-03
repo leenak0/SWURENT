@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wine"
+    tools:context=".Findpwd">
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/mainmenu"
+        android:gravity="center"
+        android:textColor="@color/darkgray"
+        android:textSize="18dp"
+        android:text="                  \u0040 swu.ac.kr" />
+
+    <EditText
+        android:id="@+id/findid"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/mainmenu"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/findpw"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login"
+        android:gravity="center"
+        android:text="Send"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</FrameLayout>

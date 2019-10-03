@@ -29,6 +29,7 @@ public class reservation_building extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(reservation_building.this, reservation_floor.class);
+                intent.putExtra("building_name", "50주년 기념관");
                 startActivity(intent);
             }
         });

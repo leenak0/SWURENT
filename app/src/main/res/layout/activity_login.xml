@@ -1,49 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/wine">
+    android:background="@color/wine"
+    tools:context=".Login">
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="90dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60dp"
-        android:src="@drawable/logo2"/>
+        android:src="@drawable/logo2" />
 
     <EditText
-        android:id="@+id/id"
+        android:id="@+id/loginid"
         android:layout_width="280dp"
         android:layout_height="40dp"
-        android:hint="종정시 id를 입력해주세요"
+        android:layout_gravity="center"
         android:layout_marginBottom="80dp"
-        android:layout_gravity="center"
+        android:background="@drawable/mainmenu"
         android:gravity="center"
-        android:background="@drawable/mainmenu"/>
+        android:hint="이메일을 입력해주세요"
+        android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/pw"
+        android:id="@+id/loginpw"
         android:layout_width="280dp"
         android:layout_height="40dp"
-        android:hint="비밀번호를 입력해주세요"
         android:layout_gravity="center"
+        android:background="@drawable/mainmenu"
         android:gravity="center"
-        android:background="@drawable/mainmenu"/>
+        android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/login"
         android:layout_width="280dp"
         android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/login"
+        android:gravity="center"
         android:text="Login"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        android:layout_marginTop="80dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/login"/>
+        android:gravity="right"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="90dp"
+        android:text="회원가입"
+        android:textColor="@color/white"
+        android:id="@+id/gosignup"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="90dp"
+        android:text="비밀번호 재설정"
+        android:textColor="@color/white"
+        android:id="@+id/gofindpw"/>
+
 </FrameLayout>

@@ -8,6 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Setting extends AppCompatActivity {
 
    Button close_setting;
@@ -39,10 +41,10 @@ public class Setting extends AppCompatActivity {
 
     //로그아웃 버튼 클릭
     public void logout(View v){
-        //종료 후 재시작
-        ActivityCompat.finishAffinity(Setting.this);
-        Intent intent=new Intent(Setting.this, Login.class);
-        startActivity(intent);
+        //로그아웃 후 재시작
+        FirebaseAuth.getInstance().signOut();
+        ActivityCompat.finishAffinity(this);
+        startActivity(new Intent(this, Login.class));
     }
 
     @Override
