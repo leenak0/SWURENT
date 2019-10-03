@@ -1,11 +1,6 @@
 package com.leenak0.swurent;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -62,12 +55,9 @@ public class reservation_list extends BaseAdapter {
         ImageView image = (ImageView) convertView.findViewById(R.id.img);
         TextView title = (TextView) convertView.findViewById(R.id.texttitle);
         TextView limitnum = (TextView) convertView.findViewById(R.id.textlimitnum);
-        Button button9 = (Button) convertView.findViewById(R.id.btn_9);
-        Button button10 = (Button) convertView.findViewById(R.id.btn_10);
-        Button button11 = (Button) convertView.findViewById(R.id.btn_11);
-        Button button12 = (Button) convertView.findViewById(R.id.btn_12);
-        Button button13 = (Button) convertView.findViewById(R.id.btn_13);
-        Button button14 = (Button) convertView.findViewById(R.id.btn_14);
+        TextView text_time = (TextView) convertView.findViewById(R.id.text_time);
+
+
 
 
         //ListVO listViewItem = ListVO.get(position);
@@ -75,7 +65,8 @@ public class reservation_list extends BaseAdapter {
         image.setImageResource(R.drawable.classroom);
         title.setText(m_oData.get(position).strTitle);
         limitnum.setText(m_oData.get(position).strLimitnum);
-        button9.setOnClickListener(m_oData.get(position).onClickListener);
+        text_time.setText(m_oData.get(position).strTexttime);
+
 
         convertView.setTag("" + position);
         return convertView;

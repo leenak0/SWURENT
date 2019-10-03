@@ -24,7 +24,7 @@ import java.util.List;
 
 public class reservation_classroom extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn_choice_date, btn_move_back_classroom;
+    Button btn_choice_date, reserv_c_prev;
     TextView textview_date;
     String building_name;
     private DatePickerDialog.OnDateSetListener callbackMethod;
@@ -43,6 +43,7 @@ public class reservation_classroom extends AppCompatActivity implements View.OnC
         this.InitializeListener();
 
         m_oListView = (ListView)findViewById(R.id.Listview);
+        reserv_c_prev=(Button)findViewById(R.id.reserv_c_prev);
 
         //데이터 생성
         String[] strTitle = {"601호", "602호", "603호", "604호", "605호"};
@@ -72,11 +73,19 @@ public class reservation_classroom extends AppCompatActivity implements View.OnC
         m_oListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), reservation2.class);
+                Intent intent = new Intent(getApplicationContext(), reservation.class);
                 intent.putExtra("classnum", oData.get(position).strTitle);
                 intent.putExtra("date", textview_date.getText().toString());
                 intent.putExtra("building_name", building_name);
                 startActivity(intent);
+            }
+        });
+
+        reserv_c_prev.setOnClickListener(new View.OnClickListener(){ //뒤로
+
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

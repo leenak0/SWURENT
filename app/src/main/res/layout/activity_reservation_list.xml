@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:layout_margin="5dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants">
 
 
     <Button
@@ -40,62 +41,11 @@
             android:layout_width="match_parent"
             android:layout_height="0dp" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/text_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/btn_9"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="#fff44f"
-                android:layout_margin="5dp"
-                android:text="9"/>
-
-            <Button
-                android:id="@+id/btn_10"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="#fff44f"
-                android:layout_margin="5dp"
-                android:text="10"/>
-
-            <Button
-                android:id="@+id/btn_11"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="#fff44f"
-                android:layout_margin="5dp"
-                android:text="11"/>
-
-            <Button
-                android:id="@+id/btn_12"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="#fff44f"
-                android:layout_margin="5dp"
-                android:text="12"/>
-
-            <Button
-                android:id="@+id/btn_13"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="#fff44f"
-                android:layout_margin="5dp"
-                android:text="13"/>
-
-            <Button
-                android:id="@+id/btn_14"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="#fff44f"
-                android:layout_margin="5dp"
-                android:text="14"/>
-
-
-        </LinearLayout>
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 
