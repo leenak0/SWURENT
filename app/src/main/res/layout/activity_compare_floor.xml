@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="층을 선택해주세요"
         android:layout_gravity="center_horizontal"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:textSize="30sp"/>
 
     <Button

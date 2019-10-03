@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="예약 내역"
         android:layout_gravity="center_horizontal"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:textSize="30sp"/>
 
     <Button
@@ -54,26 +54,23 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:background="#E9E9E9"
+                        android:background="@color/white"
                         android:gravity="center_horizontal"
-                        android:text="배정일시"
-                        android:textColor="#000000" />
+                        android:text="배정일시" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#E9E9E9"
+                        android:background="@color/white"
                         android:gravity="center_horizontal"
-                        android:text="현황"
-                        android:textColor="#000000" />
+                        android:text="현황" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#E9E9E9"
+                        android:background="@color/white"
                         android:gravity="center_horizontal"
-                        android:text="취소하기"
-                        android:textColor="#000000" />
+                        android:text="취소하기" />
                 </TableRow>
 
                 <TableRow
@@ -90,7 +87,7 @@
                         android:gravity="center_horizontal"
                         android:layout_gravity="center"
                         android:text="2019-05-23\n15:00~17:00\n304호"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -147,7 +144,7 @@
                         android:gravity="center_horizontal"
                         android:layout_gravity="center"
                         android:text="2019-05-13\n12:00~13:00\n302호"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <TextView
@@ -156,7 +153,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="완료,대표자"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <TextView
@@ -182,7 +179,7 @@
                         android:gravity="center_horizontal"
                         android:layout_gravity="center"
                         android:text="2019-04-28\n16:00~17:00\n401호"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <TextView
@@ -191,7 +188,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="위약,대표자"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <TextView
@@ -216,7 +213,7 @@
                         android:gravity="center_horizontal"
                         android:layout_gravity="center"
                         android:text="2019-02-16\n10:00~13:00\n207호"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <TextView
@@ -225,7 +222,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="왼료,대표자"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <TextView

@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:textColor="#ffffff" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -38,7 +38,7 @@
             android:layout_margin="2dp"
             android:text="50주년 기념관"
             android:textSize="14dp"
-            android:textColor="#900020"
+            android:textColor="@color/wine"
             android:background="@drawable/bg_custom_button"
             android:clickable="true"
             android:focusable="true"
@@ -52,7 +52,7 @@
             android:layout_margin="2dp"
             android:text="601호"
             android:textSize="14dp"
-            android:textColor="#900020"
+            android:textColor="@color/wine"
             android:background="@drawable/bg_custom_button"
             android:clickable="true"
             android:focusable="true"
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:text="601호 안내 사항" />
 
@@ -80,7 +80,7 @@
             android:id="@+id/notice_content"
             android:layout_width="300dp"
             android:layout_height="45dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:gravity="center"
             android:text="^^^" />
 
@@ -106,7 +106,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="예약 시간 선택"
-                android:textColor="#ffffff"
+                android:textColor="@color/white"
                 android:textSize="14dp" />
 
         </LinearLayout>
@@ -131,7 +131,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="9시-10시"
-                    android:textColor="#ffffff"/>
+                    android:textColor="@color/white"/>
 
                 <CheckBox
                     android:id="@+id/check10"
@@ -140,7 +140,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="10시-11시"
-                    android:textColor="#ffffff"/>
+                    android:textColor="@color/white"/>
 
                 <CheckBox
                     android:id="@+id/check11"
@@ -149,7 +149,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="11시-12시"
-                    android:textColor="#ffffff"/>
+                    android:textColor="@color/white"/>
 
                 <CheckBox
                     android:id="@+id/check12"
@@ -158,7 +158,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="12시-13시"
-                    android:textColor="#ffffff"/>
+                    android:textColor="@color/white"/>
 
 
             </LinearLayout>
@@ -177,7 +177,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="13시-14시"
-                    android:textColor="#ffffff"/>
+                    android:textColor="@color/white"/>
 
                 <CheckBox
                     android:id="@+id/check14"
@@ -186,7 +186,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="14시-15시"
-                    android:textColor="#ffffff"/>
+                    android:textColor="@color/white"/>
 
                 <CheckBox
                     android:id="@+id/check15"
@@ -195,7 +195,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="15시-16시"
-                    android:textColor="#ffffff"/>
+                    android:textColor="@color/white"/>
 
                 <CheckBox
                     android:id="@+id/check16"
@@ -204,8 +204,7 @@
                     android:layout_margin="5dp"
                     android:textSize="14dp"
                     android:text="16시-17시"
-                    android:textColor="#ffffff"/>
-
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -231,7 +230,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="이용 인원"
-                android:textColor="#ffffff"
+                android:textColor="@color/white"
                 android:textSize="14dp" />
 
             <EditText
@@ -266,7 +265,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="이용 목적"
-                android:textColor="#ffffff"
+                android:textColor="@color/white"
                 android:textSize="14dp" />
 
             <Spinner
@@ -291,7 +290,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="참석 예정자"
-                android:textColor="#ffffff"
+                android:textColor="@color/white"
                 android:textSize="14dp" />
 
             <EditText
@@ -331,7 +330,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="기타 알림 사항"
-                android:textColor="#ffffff"
+                android:textColor="@color/white"
                 android:textSize="14dp" />-->
 
             <EditText
@@ -361,7 +360,7 @@
             android:layout_gravity="center"
             android:background="@drawable/mainmenu"
             android:text="예약하기"
-            android:textColor="#900020"
+            android:textColor="@color/wine"
             android:textSize="14dp"/>
 
         <Button
@@ -372,7 +371,7 @@
             android:layout_gravity="center"
             android:background="@drawable/mainmenu"
             android:text="취소하기"
-            android:textColor="#900020"
+            android:textColor="@color/wine"
             android:textSize="14dp"/>
     </LinearLayout>
 </LinearLayout>

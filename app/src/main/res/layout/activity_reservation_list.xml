@@ -11,9 +11,9 @@
         android:id="@+id/btn_info_classroom"
         android:layout_width="23dp"
         android:layout_height="20dp"
-        android:background="#8977ad"
+        android:background="@color/info"
         android:text="+"
-        android:textColor="#ffffff" />
+        android:textColor="@color/white" />
 
     <ImageView
         android:id="@+id/img"

@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:background="@color/white"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="30sp"/>
 
             <FrameLayout
@@ -171,7 +171,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="시간"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="30dp"
@@ -179,7 +179,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="강의실1"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="30dp"
@@ -187,7 +187,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="강의실2"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -203,7 +203,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="0"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -211,7 +211,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="18"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -219,7 +219,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="22"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -235,7 +235,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="1"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -243,7 +243,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="17"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -251,7 +251,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="21"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -267,7 +267,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="2"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -275,7 +275,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="18"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -283,7 +283,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="22"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -299,7 +299,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="3"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -307,7 +307,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="19"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:layout_height="20dp"
@@ -315,7 +315,7 @@
                         android:background="@color/white"
                         android:gravity="center"
                         android:text="23"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
                 </TableRow>
             </TableLayout>
 

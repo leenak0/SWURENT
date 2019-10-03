@@ -90,7 +90,6 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if(view == signup) {
-            //TODO
             registerUser();
         }
     }
