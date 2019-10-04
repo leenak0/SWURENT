@@ -15,6 +15,22 @@
         android:textColor="@color/white"
         android:textSize="30sp"/>
 
+    <TextView
+        android:id="@+id/sampletxt"
+        android:textColor="@color/white"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:id="@+id/sampletxt2"
+        android:textColor="@color/white"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
+
     <Button
         android:id="@+id/rh_prev"
         android:layout_width="100dp"
@@ -26,216 +42,5 @@
         android:layout_marginLeft="20dp"
         android:layout_gravity="bottom"
         android:background="@drawable/mainmenu"/>
-
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableLayout
-                android:id="@+id/table_layout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:stretchColumns="0,1,2"
-                android:background="@drawable/border">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:baselineAligned="false"
-                    android:gravity="center"
-                    android:background="@drawable/row_border">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="center_horizontal"
-                        android:text="배정일시" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="center_horizontal"
-                        android:text="현황" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:gravity="center_horizontal"
-                        android:text="취소하기" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/row_border">
-
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:id="@+id/textView14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center"
-                        android:text="2019-05-23\n15:00~17:00\n304호"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/button_reserved"
-                            android:layout_gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:background="@color/colorReserved"
-                            android:backgroundTint="@color/colorReserved"
-                            android:onClick="reservedButton"
-                            android:text="예약중"/>
-
-                        <Button
-                            android:id="@+id/button_represent"
-                            android:layout_gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:background="@color/colorRepresent"
-                            android:backgroundTint="@color/colorRepresent"
-                            android:onClick="representButton"
-                            android:text="대표자"/>
-
-                    </LinearLayout>
-
-                    <Button
-                        android:id="@+id/button6"
-                        android:layout_gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:background="@color/colorCancel"
-                        android:backgroundTint="@color/colorCancel"
-                        android:onClick="cancelButton"
-                        android:text="취소"/>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:background="@drawable/row_border">
-
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:id="@+id/textView17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center"
-                        android:text="2019-05-13\n12:00~13:00\n302호"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="완료,대표자"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView28"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="\n\n" />
-
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/row_border">
-
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:id="@+id/textView18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center"
-                        android:text="2019-04-28\n16:00~17:00\n401호"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="위약,대표자"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView29"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="\n\n" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/row_border">
-
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:layout_gravity="center"
-                        android:text="2019-02-16\n10:00~13:00\n207호"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="왼료,대표자"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="\n\n" />
-
-                </TableRow>
-            </TableLayout>
-
-        </ScrollView>
-
-    </LinearLayout>
 
 </FrameLayout>
