@@ -3,7 +3,9 @@ package com.leenak0.swurent;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -48,18 +50,18 @@ public class reservation_classroom extends AppCompatActivity implements View.OnC
         //데이터 생성
         String[] strTitle = {"601호", "602호", "603호", "604호", "605호"};
         String[] strLimitnum = {"정원 40명, 최소인원 5명", "정원 40명, 최소인원 5명", "정원 40명, 최소인원 5명", "정원 40명, 최소인원 5명", "정원 40명, 최소인원 5명" };
-        String[] strTexttime = {"9시-10시, 10시-11시, 11시-12시, 12시-13시, 13시-14시, 14시-15시, 15시-16시, 16시-17시",
+        /*String[] strTexttime = {"9시-10시, 10시-11시, 11시-12시, 12시-13시, 13시-14시, 14시-15시, 15시-16시, 16시-17시",
                 "9시-10시, 10시-11시, 11시-12시, 12시-13시, 13시-14시, 14시-15시, 15시-16시, 16시-17시",
                 "9시-10시, 10시-11시, 11시-12시, 12시-13시, 13시-14시, 14시-15시, 15시-16시, 16시-17시",
                 "9시-10시, 10시-11시, 11시-12시, 12시-13시, 13시-14시, 14시-15시, 15시-16시, 16시-17시",
-                "9시-10시, 10시-11시, 11시-12시, 12시-13시, 13시-14시, 14시-15시, 15시-16시, 16시-17시"};
+                "9시-10시, 10시-11시, 11시-12시, 12시-13시, 13시-14시, 14시-15시, 15시-16시, 16시-17시"};*/
         int nDatCnt = 0;
         final ArrayList<ListVO> oData = new ArrayList<>();
         for (int i = 0; i<5; ++i) {
             ListVO oItem = new ListVO();
             oItem.strTitle = strTitle[nDatCnt];
-            oItem.strLimitnum = strLimitnum[nDatCnt];
-            oItem.strTexttime = strTexttime[nDatCnt++];
+            oItem.strLimitnum = strLimitnum[nDatCnt++];
+            //oItem.strTexttime = strTexttime[nDatCnt++];
             oItem.onClickListener=this;
             oData.add(oItem);
             if(nDatCnt>=strLimitnum.length) nDatCnt=0;
@@ -73,11 +75,18 @@ public class reservation_classroom extends AppCompatActivity implements View.OnC
         m_oListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), reservation.class);
-                intent.putExtra("classnum", oData.get(position).strTitle);
-                intent.putExtra("date", textview_date.getText().toString());
-                intent.putExtra("building_name", building_name);
-                startActivity(intent);
+
+                if(textview_date.getText().toString().contains("20")){
+                    Intent intent = new Intent(getApplicationContext(), side.class);
+                    intent.putExtra("classnum", oData.get(position).strTitle);
+                    intent.putExtra("date", textview_date.getText().toString());
+                    intent.putExtra("building_name", building_name);
+                    startActivity(intent);
+
+                }
+                else{
+                    alert("경고", "원하는 날짜를 먼저 선택해주세요.");
+                }
             }
         });
 
@@ -98,6 +107,21 @@ public class reservation_classroom extends AppCompatActivity implements View.OnC
         //Intent intent = new Intent(reservation_classroom.this, reservation.class);
         // intent.putExtra("date", textview_date.getText().toString());
         // startActivity(intent);
+    }
+
+    //dialog 메소드
+    private void alert(String title, String message){
+        new AlertDialog.Builder(this, R.style.MyDialogTheme)
+                .setTitle("경고")
+                .setMessage("원하는 날짜를 먼저 선택해주세요.")
+                .setCancelable(false)
+                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
     }
 
     public void InitializeView() {

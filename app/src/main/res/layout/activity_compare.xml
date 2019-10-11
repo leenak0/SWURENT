@@ -51,23 +51,27 @@
                         android:text="강의실1"
                         android:background="@color/white"/>
                     <ImageView
+                        android:id="@+id/img_com1"
                         android:adjustViewBounds="true"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/classroom"/>
                     <TextView
+                        android:id="@+id/txt_b_com1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="50주년기념관"
                         android:background="@color/white"/>
                     <TextView
+                        android:id="@+id/txt_f_com1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="5층"
                         android:background="@color/white"/>
                     <TextView
+                        android:id="@+id/txt_c_com1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -89,23 +93,27 @@
                         android:text="강의실2"
                         android:background="@color/white"/>
                     <ImageView
+                        android:id="@+id/img_com2"
                         android:adjustViewBounds="true"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/classroom"/>
                     <TextView
+                        android:id="@+id/txt_b_com2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="50주년기념관"
                         android:background="@color/white"/>
                     <TextView
+                        android:id="@+id/txt_f_com2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="5층"
                         android:background="@color/white"/>
                     <TextView
+                        android:id="@+id/txt_c_com2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

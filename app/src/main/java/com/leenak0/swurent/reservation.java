@@ -38,11 +38,10 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
     private EditText usercnt_edit, usernumber_edit, username_edit, userphone_edit;
     private Button btn_reservation, cancel_reservation;
     private CheckBox check9, check10, check11, check12, check13, check14, check15, check16;
+    String date, classnum, building_name, username, userphone, usernumber, usercnt, object, message;
 
-    Intent intent;
-    String date, classnum, building_name, username, userphone, usernumber, usercnt, object;
     int [] result_time = new int[8];
-
+    int [] time = new int[8];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,14 +51,12 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
         btn_reservation = (Button)findViewById(R.id.btn_reservation);
         cancel_reservation = (Button)findViewById(R.id.cancel_reservation);
 
-
         //날짜선택표시
-        intent = getIntent();
+        Intent intent = getIntent();
         date = intent.getStringExtra("date");
         txt_date = (TextView) findViewById(R.id.txt_date);
         txt_date.setText(date);
         //날짜선택표시끝
-
 
         //건물, 호수 선택 액티비티로 전환
         building_txt = (TextView) findViewById(R.id.building_txt);
@@ -71,7 +68,7 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
         classnum = intent.getStringExtra("classnum");
         classroom_txt.setText(classnum);
         classroom_txt.setOnClickListener(this);
-
+        time = intent.getIntArrayExtra("time");
 
         //스피너 관련 코드
         arrayList = new ArrayList<>();
@@ -79,7 +76,6 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
         arrayList.add("스터디");
         arrayList.add("대회 진행");
         arrayList.add("강연");
-
 
         arrayAdapter = new ArrayAdapter<>(getApplicationContext(),
                 android.R.layout.simple_spinner_dropdown_item,
@@ -111,6 +107,26 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
         CheckBox check14 = (CheckBox) findViewById(R.id.check14);
         CheckBox check15 = (CheckBox) findViewById(R.id.check15);
         CheckBox check16 = (CheckBox) findViewById(R.id.check16);
+
+        Toast.makeText(getApplicationContext(), txt_date.getText().toString() +"_"+
+                building_name +"_"+ classnum, Toast.LENGTH_LONG).show();
+
+        if (time[0] == 1)
+            check9.setEnabled(false);
+        if (time[1] == 1)
+            check10.setEnabled(false);
+        if (time[2] == 1)
+            check11.setEnabled(false);
+        if (time[3] == 1)
+            check12.setEnabled(false);
+        if (time[4] == 1)
+            check13.setEnabled(false);
+        if (time[5] == 1)
+            check14.setEnabled(false);
+        if (time[6] == 1)
+            check15.setEnabled(false);
+        if (time[7] == 1)
+            check16.setEnabled(false);
 
         check9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

@@ -22,5 +22,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--Alert Custom theme1-->
+    <style name="MyDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/wine</item>
+    </style>
+
 </resources>
 

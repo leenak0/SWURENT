@@ -26,6 +26,7 @@ public class info_building extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(info_building.this, info_floor.class);
+                intent.putExtra("info_building","50주년 기념관");
                 startActivity(intent);
             }
         });
