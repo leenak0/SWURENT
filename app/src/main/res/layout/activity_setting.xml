@@ -69,10 +69,11 @@
         android:layout_width="match_parent"
         android:layout_height="53dp"/>
 
-    <LinearLayout
-        android:id="@+id/layout_change_theme"
+    <RadioGroup
+        android:id="@+id/group_change_theme"
         android:layout_width="match_parent"
         android:layout_height="53dp"
+        android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/txt_change_theme"
         android:background="@color/white">
@@ -99,7 +100,7 @@
             android:text="하늘"
             android:textColor="@color/wine"
             android:textSize="15sp"/>
-    </LinearLayout>
+    </RadioGroup>
 
     <Button
         android:id="@+id/btn_change_theme"
@@ -108,7 +109,7 @@
         android:textColor="@color/wine"
         android:padding="16dp"
         android:gravity="center"
-        android:layout_below="@+id/layout_change_theme"
+        android:layout_below="@+id/group_change_theme"
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="53dp"/>

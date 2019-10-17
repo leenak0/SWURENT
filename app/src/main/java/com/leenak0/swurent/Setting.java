@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -30,7 +32,7 @@ public class Setting extends AppCompatActivity {
     Button change_theme, review, logout;
     //테마변경
     TextView txt_change_theme;
-    LinearLayout layout_change_theme;
+    RadioGroup group_change_theme;
     RadioButton wine_change_theme, pink_change_theme, blue_change_theme;
     Button btn_change_theme;
     //만족도제출
@@ -54,7 +56,7 @@ public class Setting extends AppCompatActivity {
         logout = (Button)findViewById(R.id.logout);
         //테마변경
         txt_change_theme=(TextView)findViewById(R.id.txt_change_theme);
-        layout_change_theme=(LinearLayout)findViewById(R.id.layout_change_theme);
+        group_change_theme=(RadioGroup)findViewById(R.id.group_change_theme);
         wine_change_theme=(RadioButton)findViewById(R.id.wine_change_theme);
         pink_change_theme=(RadioButton)findViewById(R.id.pink_change_theme);
         blue_change_theme=(RadioButton)findViewById(R.id.blue_change_theme);
@@ -67,7 +69,7 @@ public class Setting extends AppCompatActivity {
 
         //테마변경 관련 UI 숨기기
         txt_change_theme.setVisibility(View.INVISIBLE);
-        layout_change_theme.setVisibility(View.INVISIBLE);
+        group_change_theme.setVisibility(View.INVISIBLE);
         wine_change_theme.setVisibility(View.INVISIBLE);
         pink_change_theme.setVisibility(View.INVISIBLE);
         blue_change_theme.setVisibility(View.INVISIBLE);
@@ -97,7 +99,7 @@ public class Setting extends AppCompatActivity {
         logout.setVisibility(View.INVISIBLE);
         //테마변경 UI 보이기
         txt_change_theme.setVisibility(View.VISIBLE);
-        layout_change_theme.setVisibility(View.VISIBLE);
+        group_change_theme.setVisibility(View.VISIBLE);
         wine_change_theme.setVisibility(View.VISIBLE);
         pink_change_theme.setVisibility(View.VISIBLE);
         blue_change_theme.setVisibility(View.VISIBLE);
@@ -107,6 +109,16 @@ public class Setting extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                if(wine_change_theme.isChecked()){
+                    getApplication().setTheme(R.style.wineTheme);
+                }else if(pink_change_theme.isChecked()){
+                    getApplication().setTheme(R.style.pinkTheme);
+                }else if(blue_change_theme.isChecked()){
+                    getApplication().setTheme(R.style.blueTheme);
+                }else{
+                    Toast.makeText(getApplicationContext(), "테마를 선택해주세요", Toast.LENGTH_SHORT).show();
+                }
+
                 //데이터 전달하기
                 Intent intent = new Intent();
                 setResult(RESULT_OK, intent);
