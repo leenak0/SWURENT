@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,39 +8,30 @@
     tools:context=".reservation_history">
 
     <TextView
+        android:id="@+id/rh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="예약 내역"
-        android:layout_gravity="center_horizontal"
+        android:textSize="30sp"
         android:textColor="@color/white"
-        android:textSize="30sp"/>
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="50dp"/>
 
-    <TextView
-        android:id="@+id/sampletxt"
-        android:textColor="@color/white"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="100dp"/>
-
-    <TextView
-        android:id="@+id/sampletxt2"
-        android:textColor="@color/white"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/rh" />
 
     <Button
         android:id="@+id/rh_prev"
         android:layout_width="100dp"
         android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
         android:text="뒤로"
         android:textColor="@color/wine"
         android:textSize="18sp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_gravity="bottom"
-        android:background="@drawable/mainmenu"/>
+        android:background="@drawable/mainmenu" />
 
-</FrameLayout>
+</RelativeLayout>

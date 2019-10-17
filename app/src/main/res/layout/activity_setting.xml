@@ -1,77 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="300dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="right"
+    <Button
+        android:id="@+id/close_setting"
+        android:text="x"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:onClick="close_setting"/>
+
+    <!--메인 세팅 화면-->
+    <Button
+        android:id="@+id/change_theme"
+        android:text="테마변경"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/close_setting"
         android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/close_setting"
-            android:text="X"
-            android:textSize="15sp"
-            android:textColor="@color/wine"
-            android:gravity="center"
-            android:background="@color/white"
-            android:layout_width="30dp"
-            android:layout_height="20dp"
-            android:onClick="close"/>
-    </LinearLayout>
+        android:layout_height="53dp"
+        android:onClick="change_theme"/>
+
+    <Button
+        android:id="@+id/review"
+        android:text="앱 사용 만족도 제출"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/change_theme"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:onClick="review"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:text="로그아웃"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/review"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:onClick="logout"/>
+
+    <!--테마변경-->
+    <TextView
+        android:id="@+id/txt_change_theme"
+        android:text="테마변경"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/close_setting"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"/>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
+        android:id="@+id/layout_change_theme"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/change_theme"
-            android:text="테마변경"
-            android:textSize="15sp"
+        android:layout_height="53dp"
+        android:gravity="center"
+        android:layout_below="@+id/txt_change_theme"
+        android:background="@color/white">
+        <RadioButton
+            android:id="@+id/wine_change_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="와인"
             android:textColor="@color/wine"
-            android:padding="16dp"
-            android:gravity="center"
-            android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"/>
+            android:textSize="15sp"/>
+        <RadioButton
+            android:id="@+id/pink_change_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="분홍"
+            android:textColor="@color/wine"
+            android:textSize="15sp"/>
+        <RadioButton
+            android:id="@+id/blue_change_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="하늘"
+            android:textColor="@color/wine"
+            android:textSize="15sp"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_change_theme"
+        android:text="변경"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/layout_change_theme"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"/>
+
+
+    <!--앱 사용 만족도 제출-->
+    <TextView
+        android:id="@+id/txt_review"
+        android:text="앱 사용 만족도 제출"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/close_setting"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"/>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
+        android:id="@+id/layout_star"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/review"
-            android:text="앱 사용 만족도 제출"
-            android:textSize="15sp"
-            android:textColor="@color/wine"
-            android:padding="16dp"
-            android:gravity="center"
+        android:layout_height="53dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/txt_review"
+        android:background="@color/white">
+        <RatingBar
+            android:id="@+id/star"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="1"
             android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <Button
+        android:id="@+id/submit_star"
+        android:text="제출"
+        android:textSize="15sp"
+        android:textColor="@color/wine"
+        android:padding="16dp"
         android:gravity="center"
+        android:layout_below="@+id/layout_star"
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/logout"
-            android:text="로그아웃"
-            android:textSize="15sp"
-            android:textColor="@color/wine"
-            android:padding="16dp"
-            android:gravity="center"
-            android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
-            android:onClick="logout"/>
-    </LinearLayout>
+        android:layout_height="53dp"/>
 
-</LinearLayout>
+</RelativeLayout>

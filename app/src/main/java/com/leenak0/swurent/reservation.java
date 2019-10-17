@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 
@@ -38,7 +39,7 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
     private EditText usercnt_edit, usernumber_edit, username_edit, userphone_edit;
     private Button btn_reservation, cancel_reservation;
     private CheckBox check9, check10, check11, check12, check13, check14, check15, check16;
-    String date, classnum, building_name, username, userphone, usernumber, usercnt, object, message;
+    String date, classnum, building_name, username, userphone, usernumber, usercnt, object, message, currentuser;
 
     int [] result_time = new int[8];
     int [] time = new int[8];
@@ -50,6 +51,7 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
 
         btn_reservation = (Button)findViewById(R.id.btn_reservation);
         cancel_reservation = (Button)findViewById(R.id.cancel_reservation);
+        currentuser = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
         //날짜선택표시
         Intent intent = getIntent();
@@ -77,9 +79,7 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
         arrayList.add("대회 진행");
         arrayList.add("강연");
 
-        arrayAdapter = new ArrayAdapter<>(getApplicationContext(),
-                android.R.layout.simple_spinner_dropdown_item,
-                arrayList);
+        arrayAdapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, arrayList);
 
         spinner1 = (Spinner) findViewById(R.id.spinner1);
         spinner1.setAdapter(arrayAdapter);
@@ -210,12 +210,10 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
                     if (result_time[i] == 1) {
                         String time = Integer.toString(i+9);
                         quote.put(time, Arrays.asList(usernumber_edit.getText().toString(), username_edit.getText().toString(), userphone_edit.getText().toString(), usercnt_edit.getText().toString(), object));
-                        db.collection("예시").document(txt_date.getText().toString() +"_"+building_name +"_"+ classnum)
-                                .set(quote, SetOptions.merge());
+                        db.collection("예시").document(txt_date.getText().toString() +"_"+building_name +"_"+ classnum).set(quote, SetOptions.merge());
 
-                        quote2.put(txt_date.getText().toString()+"_"+time, Arrays.asList(building_name, classnum));
-                        db.collection("회원예약내역").document(usernumber_edit.getText().toString())
-                                .set(quote2, SetOptions.merge());
+                        quote2.put(txt_date.getText().toString()+"_"+time, Arrays.asList(building_name, classnum, usernumber_edit.getText().toString()));
+                        db.collection("회원예약내역").document(currentuser).set(quote2, SetOptions.merge());
                     }
                 }
                 Toast.makeText(getApplicationContext(), "예약되었습니다.", Toast.LENGTH_SHORT).show();
@@ -232,8 +230,6 @@ public class reservation extends AppCompatActivity implements View.OnClickListen
                 finish();
             }
         });
-
-
     }
 
     //OnClickListner
